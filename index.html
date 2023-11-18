@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/guess-the-artist/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/guess-the-artist/assets/index-tAySs1r2.js"></script>
+    <title>Guess the Artist</title>
+    <script type="module" crossorigin src="/guess-the-artist/assets/index-a-cBGxeh.js"></script>
     <link rel="stylesheet" crossorigin href="/guess-the-artist/assets/index-4sK4E3Wk.css">
   </head>
   <body>
     <div id="root"></div>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+      <script>
+      window.onSpotifyWebPlaybackSDKReady = () => {
+      const token = 'BQCtvv1lJM_wzMSEmV19FkKEBlVQFae5dC4mvFTuMrZGeqeQaaNteoR2AcRYdTi-KXjoAOz_Y8aTHb8-pta9nU8R2g9LpkDM_f-UN8t45NktasDM0O4XCOdrLE6by3XSHFmc1U1cx3utnZRevFc0iNXGUkFjBlxr-KLMR2_B-lWhK1onBSpTP__1Tf_VvllqA8PB6uriTBs
+';
+      const player = new Spotify.Player({
+        name: 'Web Playback SDK Quick Start Player',
+        getOAuthToken: cb => { cb(token); },
+        volume: 0.5
+      });
+      </script>
   </body>
 </html>
