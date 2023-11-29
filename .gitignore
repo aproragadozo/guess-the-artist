@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# environment variables -- using GH repo secrets that I reference in the workflow instead
+.env
